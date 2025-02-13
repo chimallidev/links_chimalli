@@ -2,6 +2,7 @@ import reflex as rx
 from links_chimalli.styles.colors import Color
 from links_chimalli.styles.styles import Size
 from links_chimalli.components.link_icon import link_icon
+import links_chimalli.constants as constant
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -27,19 +28,14 @@ def header() -> rx.Component:
                 ),
                 rx.hstack(
                     link_icon(
-                        "/github.svg",
+                        "icons/github.svg",
                         "https://solucionint.com",
                         "GitHub"
                     ),
                     link_icon(
-                        "/github.svg",
-                        "https://solucionint.com",
-                        "GitHub"
-                    ),
-                    link_icon(
-                        "/github.svg",
-                        "https://solucionint.com",
-                        "GitHub"
+                        "icons/x.svg",
+                        constant.X,
+                        "x"
                     ),
                 margin_top=Size.MEDIUM.value,
                 spacing="5"
@@ -55,10 +51,9 @@ def header() -> rx.Component:
             width="100%"
         ),
         rx.text('''
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            In accumsan cursus diam, non fermentum ligula viverra vitae. 
-            Cras enim massa, sagittis nec nisl eu, condimentum volutpat ligula. 
-            Sed eget bibendum eros. Fusce pretium et dolor sit amet pulvinar. 
+            Desarrollador autodidacta y freelance, especializado en Python con 
+            conocimientos en Kotlin. En este espacio encontrarás todos mis enlaces 
+            relevantes. ¡Bienvenid@!🚀
         ''',
         color=Color.SECONDARY.value,
         font_size=Size.DEFAULT.value,
