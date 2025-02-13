@@ -27,5 +27,11 @@ app=rx.App(
     stylesheets=styles.STYLESHEETS,
     style=styles.BASE_STYLE
 )
-app.add_page(index)
+app.add_page(
+    index,
+    title="ChimalliDev | Desarrollador especializado en Python",
+    description="""Hola soy Erick Roman, desarrollador autodidacta 
+    y freelance, especializado en Python con conocimientos en Kotlin.""",
+    image="avatar.ico"
+)
 app._compile
