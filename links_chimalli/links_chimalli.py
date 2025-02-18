@@ -34,4 +34,3 @@ app.add_page(
     y freelance, especializado en Python con conocimientos en Kotlin.""",
     image="avatar.ico"
 )
-app._compile
