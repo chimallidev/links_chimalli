@@ -7,7 +7,7 @@ def footer() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.image(
-                src="avatar.avif",
+                src="/avatar.avif",
                 height=Size.XX_BIG.value,
                 width=Size.XX_BIG.value,
                 alt="""Logotipo de ChimalliDev. Letras 'C' y 'D' 

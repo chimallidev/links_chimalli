@@ -2,14 +2,14 @@ import reflex as rx
 from links_chimalli.styles.styles import Size
 import links_chimalli.styles.styles as styles
 
-def link_button(title:str, body:str, image:str, url:str) -> rx.Component:
+def link_button(title:str, body:str, image:str, url:str, is_external=True) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
                 rx.image(
                     src=image,
-                    width=Size.BIG.value,
-                    height=Size.BIG.value,
+                    width=Size.X_BIG.value,
+                    height=Size.X_BIG.value,
                     margin=Size.DEFAULT.value,
                     alt=title
                 ),
@@ -25,6 +25,6 @@ def link_button(title:str, body:str, image:str, url:str) -> rx.Component:
             ),
         ),
         href=url,
-        is_external=True,
+        is_external=is_external,
         width="100%"
     )

@@ -4,7 +4,7 @@ from links_chimalli.styles.styles import Size
 from links_chimalli.components.link_icon import link_icon
 import links_chimalli.constants as constant
 
-def header() -> rx.Component:
+def header(details=True) -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.avatar(
@@ -28,38 +28,45 @@ def header() -> rx.Component:
                 ),
                 rx.hstack(
                     link_icon(
-                        "icons/github.svg",
+                        "/icons/github.svg",
                         "https://solucionint.com",
                         "GitHub"
                     ),
                     link_icon(
-                        "icons/x.svg",
+                        "/icons/x.svg",
                         constant.X,
                         "x"
                     ),
-                margin_top=Size.MEDIUM.value,
-                spacing="5"
+                    margin_top=Size.MEDIUM.value,
+                    spacing="5"
                 ),
                 spacing="0",
                 margin_top=Size.X_DEF.value
-
-            )
+            ),
+            width="100%",
+            align_items="start",
+            spacing="4"
         ),
         rx.box(
             bg=Color.SECONDARY.value, 
             height=Size.TINY.value, 
             width="100%"
         ),
-        rx.text('''
-            Desarrollador autodidacta y freelance, especializado en Python con 
-            conocimientos en Kotlin. En este espacio encontrarás todos mis enlaces 
-            relevantes. ¡Bienvenid@!🚀
-        ''',
-        color=Color.SECONDARY.value,
-        font_size=Size.DEFAULT.value,
-        margin_top=Size.MEDIUM.value
+        rx.cond(
+            details,
+            rx.text('''
+                Desarrollador autodidacta y freelance, especializado en Python con 
+                conocimientos en Kotlin. En este espacio encontrarás todos mis enlaces 
+                relevantes. ¡Bienvenid@!🚀
+                ''',
+                color=Color.SECONDARY.value,
+                font_size=Size.DEFAULT.value,
+                margin_top=Size.MEDIUM.value
+            ),
         ),
-        align_items="start"
+        align_items="start",
+        width="100%"
     )
+
 
     

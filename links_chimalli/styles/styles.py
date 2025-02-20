@@ -21,8 +21,8 @@ class Size(Enum):
     X_DEF="1.2em"
     LARGE="1.5em"
     BIG="2em"
-    X_BIG="4em"
-    XX_BIG="6em"
+    X_BIG="3em"
+    XX_BIG="5em"
     XXX_BIG="8em"
 
 BASE_STYLE={

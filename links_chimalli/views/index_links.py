@@ -4,32 +4,40 @@ from links_chimalli.components.title import title
 import links_chimalli.constants as constant
 from links_chimalli.styles.styles import Size
 from links_chimalli.components.link_card import link_card
+from links_chimalli.routes import Route
 
-def links() -> rx.Component:
+def index_links() -> rx.Component:
     return rx.vstack(
+        link_button(
+            "Cursos",
+            "Recursos gratis de programación",
+            "/icons/code.svg",
+            Route.CURSOS.value,
+            is_external=False
+        ),
         link_button(
             "Youtube",
             "Videos sobre programación",
-            "icons/youtube.svg",
+            "/icons/youtube.svg",
             constant.YOUTUBE
         ),
         link_button(
             "Tik Tok",
             "Videos cortos sobre pogramación",
-            "icons/tik tok.svg",
+            "/icons/tik tok.svg",
             constant.TIKTOK
         ),
         link_button(
             "Instagram",
             "Mi día a día como programador",
-            "icons/instagram.svg",
+            "/icons/instagram.svg",
             constant.INSTAGRAM
         ),
         rx.box(height=Size.DEFAULT.value),
         link_button(
             "Invítame un café",
             "¿Quieres apoyarme?",
-            "icons/coffee.svg",
+            "/icons/coffee.svg",
             constant.SOLUCIONINT
         ),
         title("Destacado"),
@@ -43,7 +51,7 @@ def links() -> rx.Component:
 
             ),
             link_card(
-                "icons/android.svg",
+                "/icons/android.svg",
                 "App: solucionint ", 
                 constant.APP_SOLUCIONINT,
                 "App de solucionint"
@@ -55,7 +63,7 @@ def links() -> rx.Component:
         link_button(
             "Email",
             constant.EMAIL,
-            "icons/email.svg",
+            "/icons/email.svg",
             f"mailto:{constant.EMAIL}"
         ),
         width="100%",

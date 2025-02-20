@@ -1,36 +1,20 @@
 import reflex as rx
-from links_chimalli.components.nav_bar import nav_bar
-from links_chimalli.views.header.header import header
-from links_chimalli.components.links.links import links
-import links_chimalli.styles.styles as styles 
-from links_chimalli.styles.styles import Size
-from links_chimalli.components.footer import footer
+import links_chimalli.styles.styles as styles
+from links_chimalli.pages.index import index
+from links_chimalli.pages.courses import courses
 
-def index() -> rx.Component:
-    return rx.box(
-        nav_bar(),
-        rx.center(
-            rx.vstack(
-                header(),
-                links(),
-                max_width=styles.MAX_WIDTH,
-                width="100%",
-                margin_y=Size.BIG.value,
-                padding=Size.BIG.value,
-                spacing="0"
-            ),
-        ),
-        footer()
-    )
 
 app=rx.App(
     stylesheets=styles.STYLESHEETS,
-    style=styles.BASE_STYLE
-)
-app.add_page(
-    index,
-    title="ChimalliDev | Desarrollador especializado en Python",
-    description="""Hola soy Erick Roman, desarrollador autodidacta 
-    y freelance, especializado en Python con conocimientos en Kotlin.""",
-    image="avatar.ico"
+    style=styles.BASE_STYLE,
+    head_components=[
+        rx.script(src="https://www.googletagmanager.com/gtag/js?id=G-CHX2SC8XHB"),
+        rx.script("""
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-CHX2SC8XHB');
+        """)
+    ]
 )
