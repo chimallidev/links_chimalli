@@ -1,5 +1,5 @@
 python -m venv .venv_chimalli
-source .venv_chimalli/Scripts/activate
+source .venv_chimalli/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 rm -rf public
