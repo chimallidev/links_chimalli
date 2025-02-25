@@ -1,4 +1,3 @@
-cd links_chimalli
 python -m venv .venv_chimalli
 source .venv_chimalli/Scripts/activate
 pip install --upgrade pip
