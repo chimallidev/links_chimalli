@@ -1,8 +1,9 @@
 source .venv_chimalli/Scripts/activate
-python.exe -m pip install --upgrade pip
+pip install --upgrade pip
 pip install -r requirements.txt
-API_URL=https://chimallidev-links-web.up.railway.app/ reflex export --frontend-only
 rm -rf public
+reflex init
+reflex export --frontend-only
 unzip frontend.zip -d public
 rm -f frontend.zip
 deactivate
