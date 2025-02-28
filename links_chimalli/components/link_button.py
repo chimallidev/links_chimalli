@@ -2,7 +2,7 @@ import reflex as rx
 from links_chimalli.styles.styles import Size
 import links_chimalli.styles.styles as styles
 
-def link_button(title:str, body:str, image:str, url:str, is_external=True) -> rx.Component:
+def link_button(title:str, body:str, image:str, url:str, is_external=True, highlight_color=None) -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
@@ -23,6 +23,7 @@ def link_button(title:str, body:str, image:str, url:str, is_external=True) -> rx
                 ),
                 width="100%"
             ),
+            border=f"{'4px' if highlight_color != None else '0px'} solid {highlight_color}"
         ),
         href=url,
         is_external=is_external,

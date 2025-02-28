@@ -11,8 +11,9 @@ def header(details=True) -> rx.Component:
                 src="/avatar.avif",
                 fallback="ER",
                 variant="solid",
-                size="9",
-                radius="none"
+                size="7",
+                radius="none",
+                margin_top=Size.LARGE.value
             ),
             rx.vstack(
                 rx.text.strong(
@@ -23,7 +24,7 @@ def header(details=True) -> rx.Component:
                 rx.text(
                     "@chimallidev", 
                     color=Color.PRIMARY.value,
-                    font_size=Size.X_DEF.value,
+                    font_size=Size.DEFAULT.value,
                     margin_top=Size.ZERO.value
                 ),
                 rx.hstack(
@@ -37,11 +38,11 @@ def header(details=True) -> rx.Component:
                         constant.X,
                         "x"
                     ),
-                    margin_top=Size.MEDIUM.value,
+                    margin_top=Size.DEFAULT.value,
                     spacing="5"
                 ),
                 spacing="0",
-                margin_top=Size.X_DEF.value
+                margin_top=Size.DEFAULT.value
             ),
             width="100%",
             align_items="start",

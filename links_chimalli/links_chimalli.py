@@ -2,6 +2,7 @@ import reflex as rx
 import links_chimalli.styles.styles as styles
 from links_chimalli.pages.index import index
 from links_chimalli.pages.courses import courses
+from links_chimalli.api.api import hello
 
 
 app=rx.App(
@@ -18,3 +19,5 @@ app=rx.App(
         """)
     ]
 )
+
+app.api.add_api_route("/hola", hello)

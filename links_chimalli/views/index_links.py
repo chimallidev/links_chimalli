@@ -5,6 +5,7 @@ import links_chimalli.constants as constant
 from links_chimalli.styles.styles import Size
 from links_chimalli.components.link_card import link_card
 from links_chimalli.routes import Route
+from links_chimalli.styles.colors import Color
 
 def index_links() -> rx.Component:
     return rx.vstack(
@@ -13,7 +14,8 @@ def index_links() -> rx.Component:
             "Recursos gratis de programación",
             "/icons/code.svg",
             Route.CURSOS.value,
-            is_external=False
+            is_external=False,
+            highlight_color=Color.PRIMARY.value
         ),
         link_button(
             "Youtube",
