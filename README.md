@@ -1,6 +1,6 @@
 # <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px">&nbsp;Página de enlaces de Chimallidev
 
-![Página web de enlaces Chimallidev v4](app/static/img/og_chimallidev_links.png)
+![Página web de enlaces Chimallidev](assets/screenshots/vista_previa.png)
 
 ## Descripción
 Aplicación web construida con Python y Reflex que funciona como centro de enlaces personales y profesionales de Chimallidev. Permite acceder fácilmente a proyectos, plataformas de contacto y contenido relacionado con programación.
