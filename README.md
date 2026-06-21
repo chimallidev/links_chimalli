@@ -15,7 +15,7 @@ Aplicación web construida con Python y Reflex que funciona como centro de enlac
 
 [DEMO](https://chimallidev-links-web.vercel.app/)
 
-## Tecnologías
+## Tecnologías utilizadas
 
 <span> 
   
@@ -24,6 +24,10 @@ Aplicación web construida con Python y Reflex que funciona como centro de enlac
   ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
  
 </span>
+
+## Documentación 📑
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/chimallidev/links_chimalli)
 
 ## Contratación
 
